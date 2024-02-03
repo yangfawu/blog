@@ -8,8 +8,9 @@ export default function Info() {
                 <Image
                     src="/logo.svg"
                     alt="Yangfa Wu"
-                    width={210}
-                    height={80}
+                    width={0}
+                    height={0}
+                    className="w-52 h-auto"
                 />
             </div>
             <p>

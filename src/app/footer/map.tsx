@@ -7,12 +7,10 @@ const LINKS: {
 }[] = [
     { href: "/", text: "Home" },
     { href: "/search", text: "Search" },
-    { href: "/tags", text: "Tags" },
-    { href: "/categories", text: "Cateories" },
     { href: "/contact", text: "Contact" },
 ]
 
-export default function Sitemap() {
+export default function Map() {
     return (
         <Links title="Sitemap">
             {LINKS.map(({ href, text }) => (

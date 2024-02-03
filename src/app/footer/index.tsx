@@ -3,7 +3,7 @@ import SnatchingDiv from "@/components/snatching-div"
 import Developer from "./developer"
 import Info from "./info"
 import SocialMedia from "./my-socials"
-import Sitemap from "./sitemap"
+import Map from "./map"
 
 export default function Footer() {
     return (
@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className="flex gap-8 lg:gap-24 flex-wrap justify-between flex-col md:flex-row">
                     <Info />
                     <div className="flex-1 flex flex-wrap md:flex-nowrap md:justify-end gap-8 md:gap-16">
-                        <Sitemap />
+                        <Map />
                         <Developer />
                         <SocialMedia />
                     </div>

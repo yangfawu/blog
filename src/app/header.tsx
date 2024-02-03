@@ -8,16 +8,19 @@ export default function Header() {
     return (
         <header>
             <SnatchingDiv className="flex gap-4 items-center justify-between">
-                <div className="w-[30px] h-[30px]" />
+                <div className="w-[30px] h-[30px] hidden md:block" />
                 <div className="py-4">
                     <Link href="/" className="flex gap-4 items-center">
                         <Image
                             src="/logo.svg"
                             alt="Yangfa Wu"
-                            width={116}
-                            height={30}
+                            width={0}
+                            height={0}
+                            className="w-auto h-12"
                         />
-                        <p className="text-xl mx-auto">Personal Blog</p>
+                        <p className="text-xl mx-auto font-thin text-nowrap">
+                            Personal <span className="text-red-600 font-normal">Blog</span>
+                        </p>
                     </Link>
                 </div>
                 <div className="w-[30px] h-[30px] flex items-center justify-center">
