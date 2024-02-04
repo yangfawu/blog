@@ -6,7 +6,7 @@ import PaginationSkeleton from "./pagination-skeleton"
 import Results from "./results"
 import SearchBar from "./search-bar"
 
-const PAGE_SIZE = 10
+const PAGE_SIZE = 4 * 3
 
 function search(data: PostMeta[], query: string) {
     const fuse = new Fuse(data, {
