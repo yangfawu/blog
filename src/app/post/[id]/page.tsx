@@ -6,8 +6,8 @@ import "highlight.js/styles/github-dark.min.css"
 import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import TOC from "./toc"
 import { Suspense } from "react"
+import TOC from "./toc"
 
 interface Props {
     params: { id: string }
@@ -62,7 +62,9 @@ export default async function Page({ params }: Props) {
                 <div className="hidden md:block w-60 lg:w-80 sticky top-4">
                     <h3 className="font-semibold text-xl">Table of Contents</h3>
                     <Divider className="mb-2" />
-                    <Suspense fallback={<p className="italic text-sm">loading...</p>}>
+                    <Suspense
+                        fallback={<p className="italic text-sm">loading...</p>}
+                    >
                         <TOC />
                     </Suspense>
                 </div>

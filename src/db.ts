@@ -2,6 +2,10 @@ import { compileMDX } from "next-mdx-remote/rsc"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeHighlight from "rehype-highlight"
 import rehypeSlug from "rehype-slug"
+import MdxA from "./components/mdx-a"
+import MdxH2 from "./components/mdx-h2"
+import MdxH3 from "./components/mdx-h3"
+import MdxHr from "./components/mdx-hr"
 
 const SOURCE_REPO = `yangfawu/blog-posts`
 const BASE_RAW_URL = `https://raw.githubusercontent.com/${SOURCE_REPO}/main`
@@ -25,7 +29,12 @@ export async function getPost(id: string): Promise<Post | null> {
 
     const { frontmatter, content } = await compileMDX<Omit<PostMeta, "id">>({
         source: rawContent,
-        components: {},
+        components: {
+            a: MdxA,
+            h2: MdxH2,
+            h3: MdxH3,
+            hr: MdxHr,
+        },
         options: {
             parseFrontmatter: true,
             mdxOptions: {
