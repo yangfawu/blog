@@ -6,6 +6,8 @@ import "highlight.js/styles/github-dark.min.css"
 import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import TOC from "./toc"
+import { Suspense } from "react"
 
 interface Props {
     params: { id: string }
@@ -60,13 +62,9 @@ export default async function Page({ params }: Props) {
                 <div className="hidden md:block w-60 lg:w-80 sticky top-4">
                     <h3 className="font-semibold text-xl">Table of Contents</h3>
                     <Divider className="mb-2" />
-                    <div className="max-h-[calc(100vh-8rem)] overflow-y-auto">
-                        {/* Anchor links TBA */}
-                        <p className="hidden only:block text-sm italic">
-                            Oops, it seems like this post has no links for you
-                            to jump around to.
-                        </p>
-                    </div>
+                    <Suspense fallback={<p className="italic text-sm">loading...</p>}>
+                        <TOC />
+                    </Suspense>
                 </div>
             </div>
         </div>
