@@ -1,9 +1,9 @@
 import tw from "tailwind-styled-components"
 
 const SnatchingDiv = tw.div`
-    mx-4
-    md:mx-20
-    lg:mx-36
+    px-4
+    mx-auto
+    max-w-screen-xl
 `
 
 export default SnatchingDiv

@@ -7,7 +7,7 @@ interface Props {
 export default function Layout({ children }: Props) {
     return (
         <main className="flex-1 py-16">
-            <SnatchingDiv className="max-w-screen-lg">{children}</SnatchingDiv>
+            <SnatchingDiv className="space-y-8">{children}</SnatchingDiv>
         </main>
     )
 }
