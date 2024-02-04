@@ -1,9 +1,9 @@
-import Divider from "@/components/divider"
-import SnatchingDiv from "@/components/snatching-div"
+import Divider from "../divider"
+import SnatchingDiv from "../snatching-div"
 import Developer from "./developer"
 import Info from "./info"
-import SocialMedia from "./my-socials"
 import Map from "./map"
+import SocialMedia from "./my-socials"
 
 export default function Footer() {
     return (

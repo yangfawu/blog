@@ -3,13 +3,12 @@ import tw from "tailwind-styled-components"
 
 interface Props {
     $outline?: boolean
+    $big?: boolean
     children?: ReactNode
 }
 
 const Chip = tw.span<Props>`
-    px-2
-    py-1
-    text-xs
+    ${({ $big }) => ($big ? "text-base px-3 py-1.5" : "text-sm px-2 py-1")}
     rounded-full
     shadow-sm
     hover:shadow-md

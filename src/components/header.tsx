@@ -1,8 +1,8 @@
-import Divider from "@/components/divider"
-import SnatchingDiv from "@/components/snatching-div"
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
+import Divider from "./divider"
+import SnatchingDiv from "./snatching-div"
 
 export default function Header() {
     return (
@@ -19,7 +19,10 @@ export default function Header() {
                             className="w-auto h-12"
                         />
                         <p className="text-xl mx-auto font-thin text-nowrap">
-                            Personal <span className="text-red-600 font-normal">Blog</span>
+                            Personal{" "}
+                            <span className="text-red-600 font-normal">
+                                Blog
+                            </span>
                         </p>
                     </Link>
                 </div>

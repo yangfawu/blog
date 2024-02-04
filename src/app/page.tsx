@@ -1,8 +1,13 @@
 import Action from "@/components/action"
 import LatestPosts from "@/components/latest-posts"
 import SnatchingDiv from "@/components/snatching-div"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+    description: `This is my personal blog site built with Next.js. I document things I encountered along my learning journey so that I can refer back to them for a quick reference or refresher. I hope others on a similar path of discovery find these posts useful as well!`,
+}
 
 export default function Page() {
     return (
@@ -15,7 +20,7 @@ export default function Page() {
                             width={0}
                             height={0}
                             sizes="100vw"
-                            className="w-full h-auto lg:max-h-96 rounded-md object-cover"
+                            className="w-full h-auto lg:max-h-96 rounded-md object-cover bg-slate-400"
                             alt="https://unsplash.com/photos/silver-laptop-computer-near-notebook-ck0i9Dnjtj0"
                         />
                     </div>
@@ -32,7 +37,7 @@ export default function Page() {
                                 width={0}
                                 height={0}
                                 sizes="100vw"
-                                className="w-full h-auto max-h-80 rounded-md object-cover"
+                                className="w-full h-auto max-h-80 rounded-md object-cover bg-slate-400"
                                 alt="https://unsplash.com/photos/silver-laptop-computer-near-notebook-ck0i9Dnjtj0"
                             />
                         </div>

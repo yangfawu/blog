@@ -1,9 +1,14 @@
-declare interface Post {
+declare interface PostMeta {
     id: string
     title: string
-    summary?: string
+    summary: string
     tags: string[]
     category: string
-    createdAt: Date
-    updatedAt: Date
+    date: Date
+    updated: Date
+}
+
+declare interface Post {
+    meta: PostMeta
+    content: any
 }
