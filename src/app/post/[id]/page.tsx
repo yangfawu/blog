@@ -2,6 +2,7 @@ import Chip from "@/components/chip"
 import Divider from "@/components/divider"
 import { getPost, getPostsMeta } from "@/db"
 import { format } from "fecha"
+import "highlight.js/styles/github-dark.min.css"
 import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -48,7 +49,7 @@ export default async function Page({ params }: Props) {
             </p>
             <div className="flex items-start gap-8 sm:gap-16 flex-wrap sm:flex-nowrap">
                 <div className="space-y-8 flex-1">
-                    <article>{content}</article>
+                    <article className="space-y-4">{content}</article>
                     <div className="space-y-2">
                         <Divider />
                         <p className="text-right text-sm">
@@ -61,6 +62,10 @@ export default async function Page({ params }: Props) {
                     <Divider className="mb-2" />
                     <div className="max-h-[calc(100vh-8rem)] overflow-y-auto">
                         {/* Anchor links TBA */}
+                        <p className="hidden only:block text-sm italic">
+                            Oops, it seems like this post has no links for you
+                            to jump around to.
+                        </p>
                     </div>
                 </div>
             </div>

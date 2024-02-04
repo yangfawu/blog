@@ -1,4 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
+import rehypeHighlight from "rehype-highlight"
+import rehypeSlug from "rehype-slug"
 
 const SOURCE_REPO = `yangfawu/blog-posts`
 const BASE_RAW_URL = `https://raw.githubusercontent.com/${SOURCE_REPO}/main`
@@ -25,7 +28,14 @@ export async function getPost(id: string): Promise<Post | null> {
         components: {},
         options: {
             parseFrontmatter: true,
-            mdxOptions: {},
+            mdxOptions: {
+                rehypePlugins: [
+                    // @ts-expect-error
+                    rehypeHighlight,
+                    rehypeSlug,
+                    [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                ],
+            },
         },
     })
 
