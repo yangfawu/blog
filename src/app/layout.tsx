@@ -13,7 +13,7 @@ interface Props {
 }
 export default function RootLayout({ children }: Props) {
     return (
-        <html lang="en" className="scroll-smooth">
+        <html lang="en" className="scroll-smooth scroll-pt-8">
             <body className="min-h-screen bg-orange-100 flex flex-col">
                 <Header />
                 {children}

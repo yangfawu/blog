@@ -73,6 +73,9 @@ export default async function Page({ params }: Props) {
     )
 }
 
+// 2 weeks
+export const revalidate = 2 * 7 * 24 * 60 * 60
+
 export async function generateStaticParams() {
     const posts = await getPostsMeta()
     return posts.map(({ id }) => ({ id }))
