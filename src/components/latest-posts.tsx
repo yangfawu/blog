@@ -14,7 +14,7 @@ export default async function LatestPosts() {
                 </p>
                 <h1 className="text-3xl">See something of interest?</h1>
             </div>
-            <div className="flex gap-4 items-start [&>div]:flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {data.slice(0, 3).map(post => (
                     <div key={post.id} className="space-y-4">
                         <div className="space-y-1">
