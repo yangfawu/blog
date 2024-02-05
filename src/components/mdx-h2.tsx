@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components"
 
 const MdxH2 = tw.h2`
-    text-2xl
+    text-3xl
     font-bold
     hover:underline
     hover:text-red-600
@@ -11,6 +11,7 @@ const MdxH2 = tw.h2`
     first:pt-0
     [&>a]:text-black
     [&>a]:hover:text-red-600
+    target:[&>a]:text-red-600
 `
 
 export default MdxH2

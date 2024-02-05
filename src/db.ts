@@ -3,9 +3,14 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeHighlight from "rehype-highlight"
 import rehypeSlug from "rehype-slug"
 import MdxA from "./components/mdx-a"
+import MdxBlockquote from "./components/mdx-blockquote"
 import MdxH2 from "./components/mdx-h2"
 import MdxH3 from "./components/mdx-h3"
 import MdxHr from "./components/mdx-hr"
+import MdxImage from "./components/mdx-image"
+import MdxOl from "./components/mdx-ol"
+import MdxPre from "./components/mdx-pre"
+import MdxUl from "./components/mdx-ul"
 
 const SOURCE_REPO = `yangfawu/blog-posts`
 const BASE_RAW_URL = `https://raw.githubusercontent.com/${SOURCE_REPO}/main`
@@ -31,9 +36,14 @@ export async function getPost(id: string): Promise<Post | null> {
         source: rawContent,
         components: {
             a: MdxA,
+            blockquote: MdxBlockquote,
             h2: MdxH2,
             h3: MdxH3,
             hr: MdxHr,
+            img: MdxImage,
+            ol: MdxOl,
+            pre: MdxPre,
+            ul: MdxUl,
         },
         options: {
             parseFrontmatter: true,

@@ -11,6 +11,7 @@ const MdxH3 = tw.h3`
     first:pt-0
     [&>a]:text-black
     [&>a]:hover:text-red-600
+    target:[&>a]:text-red-600
 `
 
 export default MdxH3
