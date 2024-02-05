@@ -16,6 +16,7 @@ export default function Page() {
                     sizes="100vw"
                     className="w-full h-auto max-w-lg rounded-md"
                     alt="https://unsplash.com/photos/person-using-white-and-gold-compass-iISyBKOT2D0"
+                    priority
                 />
                 <div className="flex">
                     {/* flex container needed to make gap apply correctly */}

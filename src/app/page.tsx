@@ -22,6 +22,7 @@ export default function Page() {
                             sizes="100vw"
                             className="w-full h-auto lg:max-h-96 rounded-md object-cover bg-slate-400"
                             alt="https://unsplash.com/photos/silver-laptop-computer-near-notebook-ck0i9Dnjtj0"
+                            priority
                         />
                     </div>
                     <div className="space-y-8">
