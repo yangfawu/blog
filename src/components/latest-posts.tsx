@@ -40,7 +40,9 @@ export default async function LatestPosts() {
                         </div>
                         <div className="flex">
                             <Action>
-                                <Link href={`/post/${post.id}`}>Read more</Link>
+                                <Link href={`/post/${post.id}`} prefetch>
+                                    Read more
+                                </Link>
                             </Action>
                         </div>
                     </div>

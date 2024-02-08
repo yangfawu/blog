@@ -1,5 +1,6 @@
 import Chip from "@/components/chip"
 import Divider from "@/components/divider"
+import ExternalLink from "@/components/footer/external-link"
 import { getPost, getPostsMeta } from "@/db"
 import { format } from "fecha"
 import "highlight.js/styles/github-dark.min.css"
@@ -22,8 +23,6 @@ export default async function Page({ params }: Props) {
         meta: { title, summary, category, tags, date, updated },
         content,
     } = post
-
-    await new Promise(resolve => setTimeout(resolve, 60000))
 
     return (
         <div className="space-y-8">
@@ -57,7 +56,13 @@ export default async function Page({ params }: Props) {
                     <div className="space-y-2">
                         <Divider />
                         <p className="text-right text-sm">
-                            Last updated on {format(updated, "longDate")}
+                            Last updated{" "}
+                            <ExternalLink
+                                href={`https://github.com/yangfawu/blog-posts/blob/main/posts/${id}.mdx`}
+                            >
+                                here
+                            </ExternalLink>{" "}
+                            on {format(updated, "longDate")}
                         </p>
                     </div>
                 </div>
