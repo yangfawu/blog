@@ -34,6 +34,8 @@ export default async function Page({ searchParams }: Props) {
     const end = start + PAGE_SIZE
     const slice = results.slice(start, end)
 
+    // await new Promise((resolve) => setTimeout(resolve, 60000))
+
     return (
         <>
             <div className="max-w-screen-md mx-auto">

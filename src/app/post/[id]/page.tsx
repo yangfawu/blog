@@ -23,6 +23,8 @@ export default async function Page({ params }: Props) {
         content,
     } = post
 
+    await new Promise(resolve => setTimeout(resolve, 60000))
+
     return (
         <div className="space-y-8">
             <div className="space-y-4">
